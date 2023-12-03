@@ -1,0 +1,496 @@
+2023-12-03 20:48:42.253 +05:30 [INF] Now listening on: https://[::]:7252
+2023-12-03 20:48:42.312 +05:30 [INF] Now listening on: http://[::]:5252
+2023-12-03 20:48:42.319 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-12-03 20:48:42.320 +05:30 [INF] Hosting environment: Development
+2023-12-03 20:48:42.320 +05:30 [INF] Content root path: C:\Users\vpalanisamy\Desktop\Vivitha Palanisamy\TechincalAssessment\TechincalAssessment
+2023-12-03 20:49:01.487 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7252/swagger/index.html - -
+2023-12-03 20:49:02.154 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7252/swagger/index.html - - - 200 - text/html;charset=utf-8 673.0236ms
+2023-12-03 20:49:02.154 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7252/swagger/swagger-ui.css - -
+2023-12-03 20:49:02.154 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7252/swagger/swagger-ui-standalone-preset.js - -
+2023-12-03 20:49:02.154 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7252/_framework/aspnetcore-browser-refresh.js - -
+2023-12-03 20:49:02.154 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7252/swagger/swagger-ui-bundle.js - -
+2023-12-03 20:49:02.173 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7252/_framework/aspnetcore-browser-refresh.js - - - 200 12008 application/javascript;+charset=utf-8 18.0720ms
+2023-12-03 20:49:02.222 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7252/_vs/browserLink - -
+2023-12-03 20:49:02.265 +05:30 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2023-12-03 20:49:02.266 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7252/swagger/swagger-ui.css - - - 200 144929 text/css 111.3388ms
+2023-12-03 20:49:02.284 +05:30 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2023-12-03 20:49:02.284 +05:30 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2023-12-03 20:49:02.284 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7252/swagger/swagger-ui-bundle.js - - - 200 1061536 application/javascript 129.4737ms
+2023-12-03 20:49:02.284 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7252/swagger/swagger-ui-standalone-preset.js - - - 200 312163 application/javascript 129.5595ms
+2023-12-03 20:49:02.353 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7252/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 130.9739ms
+2023-12-03 20:49:02.640 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7252/swagger/v1/swagger.json - -
+2023-12-03 20:49:02.878 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7252/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 238.6919ms
+2023-12-03 20:49:09.912 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7252/api/Book/GetAllBooks - -
+2023-12-03 20:49:09.954 +05:30 [INF] Executing endpoint 'TechincalAssessment.Controllers.BookController.GetAllBooks (TechincalAssessment)'
+2023-12-03 20:49:10.001 +05:30 [INF] Route matched with {action = "GetAllBooks", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllBooks(System.String, System.String, System.String) on controller TechincalAssessment.Controllers.BookController (TechincalAssessment).
+2023-12-03 20:49:12.938 +05:30 [INF] Entry in GetAllBooks
+2023-12-03 20:49:12.952 +05:30 [INF] Entry in GetAllBooks
+2023-12-03 20:49:13.961 +05:30 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Book'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2023-12-03 20:49:14.260 +05:30 [INF] Entity Framework Core 6.0.10 initialized 'APIDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+2023-12-03 20:49:15.823 +05:30 [INF] Executed DbCommand (61ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[AuthorId], [b].[Price], [b].[PublisherId], [b].[Title], [p].[PublisherId], [p].[Name], [a].[AuthorId], [a].[FirstName], [a].[LastName]
+FROM [Books] AS [b]
+LEFT JOIN [Publishers] AS [p] ON [b].[PublisherId] = [p].[PublisherId]
+LEFT JOIN [Authors] AS [a] ON [b].[AuthorId] = [a].[AuthorId]
+2023-12-03 20:49:15.863 +05:30 [INF] End in GetAllBooks
+2023-12-03 20:49:15.863 +05:30 [INF] End of GetAllBooks
+2023-12-03 20:49:15.869 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TechincalAssessment.Models.Book, TechincalAssessment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-12-03 20:49:15.884 +05:30 [INF] Executed action TechincalAssessment.Controllers.BookController.GetAllBooks (TechincalAssessment) in 5874.3576ms
+2023-12-03 20:49:15.885 +05:30 [INF] Executed endpoint 'TechincalAssessment.Controllers.BookController.GetAllBooks (TechincalAssessment)'
+2023-12-03 20:49:15.898 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7252/api/Book/GetAllBooks - - - 200 - application/json;+charset=utf-8 5986.7554ms
+2023-12-03 20:50:40.746 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7252/api/Book/CreateBook application/json 188
+2023-12-03 20:50:40.757 +05:30 [INF] Executing endpoint 'TechincalAssessment.Controllers.BookController.CreateBook (TechincalAssessment)'
+2023-12-03 20:50:40.763 +05:30 [INF] Route matched with {action = "CreateBook", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateBook(TechincalAssessment.Models.BookDto) on controller TechincalAssessment.Controllers.BookController (TechincalAssessment).
+2023-12-03 20:50:40.791 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-12-03 20:50:40.793 +05:30 [INF] Executed action TechincalAssessment.Controllers.BookController.CreateBook (TechincalAssessment) in 29.2737ms
+2023-12-03 20:50:40.793 +05:30 [INF] Executed endpoint 'TechincalAssessment.Controllers.BookController.CreateBook (TechincalAssessment)'
+2023-12-03 20:50:40.793 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7252/api/Book/CreateBook application/json 188 - 400 - application/problem+json;+charset=utf-8 47.0304ms
+2023-12-03 20:51:10.732 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7252/api/Book/CreateBook application/json 151
+2023-12-03 20:51:10.732 +05:30 [INF] Executing endpoint 'TechincalAssessment.Controllers.BookController.CreateBook (TechincalAssessment)'
+2023-12-03 20:51:10.733 +05:30 [INF] Route matched with {action = "CreateBook", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateBook(TechincalAssessment.Models.BookDto) on controller TechincalAssessment.Controllers.BookController (TechincalAssessment).
+2023-12-03 20:51:13.258 +05:30 [INF] Entry in GetAllBooks  Param : {"Title":"string","Price":0.0,"Publisher":{"Name":"string"},"Author":{"LastName":"string","FirstName":"string"}}
+2023-12-03 20:51:14.242 +05:30 [INF] Entry in GetAllBooks
+2023-12-03 20:51:14.258 +05:30 [INF] Entity Framework Core 6.0.10 initialized 'APIDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+2023-12-03 20:51:14.348 +05:30 [INF] Executed DbCommand (38ms) [Parameters=[@__bookDto_Publisher_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[PublisherId], [p].[Name]
+FROM [Publishers] AS [p]
+WHERE [p].[Name] = @__bookDto_Publisher_Name_0
+2023-12-03 20:51:14.601 +05:30 [INF] Executed DbCommand (28ms) [Parameters=[@p0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Publishers] ([Name])
+VALUES (@p0);
+SELECT [PublisherId]
+FROM [Publishers]
+WHERE @@ROWCOUNT = 1 AND [PublisherId] = scope_identity();
+2023-12-03 20:51:14.689 +05:30 [INF] GetAllBooks publisherId : 1
+2023-12-03 20:51:14.697 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__bookDto_Author_LastName_0='?' (Size = 4000), @__bookDto_Author_FirstName_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[AuthorId], [a].[FirstName], [a].[LastName]
+FROM [Authors] AS [a]
+WHERE ([a].[LastName] = @__bookDto_Author_LastName_0) AND ([a].[FirstName] = @__bookDto_Author_FirstName_1)
+2023-12-03 20:51:14.712 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Authors] ([FirstName], [LastName])
+VALUES (@p0, @p1);
+SELECT [AuthorId]
+FROM [Authors]
+WHERE @@ROWCOUNT = 1 AND [AuthorId] = scope_identity();
+2023-12-03 20:51:14.715 +05:30 [INF] GetAllBooks authorId : 1
+2023-12-03 20:51:14.747 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p2='?' (DbType = Int32), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Books] ([AuthorId], [Price], [PublisherId], [Title])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [Id]
+FROM [Books]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2023-12-03 20:51:14.751 +05:30 [INF] End in GetAllBooks
+2023-12-03 20:51:14.751 +05:30 [INF] End of GetAllBooks
+2023-12-03 20:51:14.755 +05:30 [INF] Executing OkObjectResult, writing value of type 'TechincalAssessment.Models.Book'.
+2023-12-03 20:51:14.761 +05:30 [INF] Executed action TechincalAssessment.Controllers.BookController.CreateBook (TechincalAssessment) in 4028.773ms
+2023-12-03 20:51:14.763 +05:30 [INF] Executed endpoint 'TechincalAssessment.Controllers.BookController.CreateBook (TechincalAssessment)'
+2023-12-03 20:51:14.764 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7252/api/Book/CreateBook application/json 151 - 200 - application/json;+charset=utf-8 4031.6026ms
+2023-12-03 20:53:08.134 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7252/api/Book/CreateBook application/json 188
+2023-12-03 20:53:08.135 +05:30 [INF] Executing endpoint 'TechincalAssessment.Controllers.BookController.CreateBook (TechincalAssessment)'
+2023-12-03 20:53:08.135 +05:30 [INF] Route matched with {action = "CreateBook", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateBook(TechincalAssessment.Models.BookDto) on controller TechincalAssessment.Controllers.BookController (TechincalAssessment).
+2023-12-03 20:53:08.161 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-12-03 20:53:08.162 +05:30 [INF] Executed action TechincalAssessment.Controllers.BookController.CreateBook (TechincalAssessment) in 26.4666ms
+2023-12-03 20:53:08.162 +05:30 [INF] Executed endpoint 'TechincalAssessment.Controllers.BookController.CreateBook (TechincalAssessment)'
+2023-12-03 20:53:08.162 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7252/api/Book/CreateBook application/json 188 - 400 - application/problem+json;+charset=utf-8 27.4913ms
+2023-12-03 20:53:25.866 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7252/api/Book/CreateBook application/json 184
+2023-12-03 20:53:25.866 +05:30 [INF] Executing endpoint 'TechincalAssessment.Controllers.BookController.CreateBook (TechincalAssessment)'
+2023-12-03 20:53:25.866 +05:30 [INF] Route matched with {action = "CreateBook", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateBook(TechincalAssessment.Models.BookDto) on controller TechincalAssessment.Controllers.BookController (TechincalAssessment).
+2023-12-03 20:53:25.867 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-12-03 20:53:25.867 +05:30 [INF] Executed action TechincalAssessment.Controllers.BookController.CreateBook (TechincalAssessment) in 0.9289ms
+2023-12-03 20:53:25.867 +05:30 [INF] Executed endpoint 'TechincalAssessment.Controllers.BookController.CreateBook (TechincalAssessment)'
+2023-12-03 20:53:25.868 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7252/api/Book/CreateBook application/json 184 - 400 - application/problem+json;+charset=utf-8 1.3867ms
+2023-12-03 20:53:47.292 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7252/api/Book/CreateBook application/json 187
+2023-12-03 20:53:47.293 +05:30 [INF] Executing endpoint 'TechincalAssessment.Controllers.BookController.CreateBook (TechincalAssessment)'
+2023-12-03 20:53:47.293 +05:30 [INF] Route matched with {action = "CreateBook", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateBook(TechincalAssessment.Models.BookDto) on controller TechincalAssessment.Controllers.BookController (TechincalAssessment).
+2023-12-03 20:53:50.107 +05:30 [INF] Entry in GetAllBooks  Param : {"Title":"The God of Small Things","Price":1167.27,"Publisher":{"Name":"HarperCollins India"},"Author":{"LastName":"Roy","FirstName":"Arundhati"}}
+2023-12-03 20:53:51.042 +05:30 [INF] Entry in GetAllBooks
+2023-12-03 20:53:51.095 +05:30 [INF] Entity Framework Core 6.0.10 initialized 'APIDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+2023-12-03 20:53:51.101 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__bookDto_Publisher_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[PublisherId], [p].[Name]
+FROM [Publishers] AS [p]
+WHERE [p].[Name] = @__bookDto_Publisher_Name_0
+2023-12-03 20:53:51.104 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Publishers] ([Name])
+VALUES (@p0);
+SELECT [PublisherId]
+FROM [Publishers]
+WHERE @@ROWCOUNT = 1 AND [PublisherId] = scope_identity();
+2023-12-03 20:53:51.112 +05:30 [INF] GetAllBooks publisherId : 2
+2023-12-03 20:53:51.114 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__bookDto_Author_LastName_0='?' (Size = 4000), @__bookDto_Author_FirstName_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[AuthorId], [a].[FirstName], [a].[LastName]
+FROM [Authors] AS [a]
+WHERE ([a].[LastName] = @__bookDto_Author_LastName_0) AND ([a].[FirstName] = @__bookDto_Author_FirstName_1)
+2023-12-03 20:53:51.117 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Authors] ([FirstName], [LastName])
+VALUES (@p0, @p1);
+SELECT [AuthorId]
+FROM [Authors]
+WHERE @@ROWCOUNT = 1 AND [AuthorId] = scope_identity();
+2023-12-03 20:53:51.121 +05:30 [INF] GetAllBooks authorId : 2
+2023-12-03 20:53:51.127 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p2='?' (DbType = Int32), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Books] ([AuthorId], [Price], [PublisherId], [Title])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [Id]
+FROM [Books]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2023-12-03 20:53:51.127 +05:30 [INF] End in GetAllBooks
+2023-12-03 20:53:51.128 +05:30 [INF] End of GetAllBooks
+2023-12-03 20:53:51.128 +05:30 [INF] Executing OkObjectResult, writing value of type 'TechincalAssessment.Models.Book'.
+2023-12-03 20:53:51.128 +05:30 [INF] Executed action TechincalAssessment.Controllers.BookController.CreateBook (TechincalAssessment) in 3834.4517ms
+2023-12-03 20:53:51.128 +05:30 [INF] Executed endpoint 'TechincalAssessment.Controllers.BookController.CreateBook (TechincalAssessment)'
+2023-12-03 20:53:51.128 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7252/api/Book/CreateBook application/json 187 - 200 - application/json;+charset=utf-8 3835.7773ms
+2023-12-03 20:55:34.837 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7252/api/Book/GetAllBooks - -
+2023-12-03 20:55:34.839 +05:30 [INF] Executing endpoint 'TechincalAssessment.Controllers.BookController.GetAllBooks (TechincalAssessment)'
+2023-12-03 20:55:34.841 +05:30 [INF] Route matched with {action = "GetAllBooks", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllBooks(System.String, System.String, System.String) on controller TechincalAssessment.Controllers.BookController (TechincalAssessment).
+2023-12-03 20:55:36.397 +05:30 [INF] Entry in GetAllBooks
+2023-12-03 20:55:36.397 +05:30 [INF] Entry in GetAllBooks
+2023-12-03 20:55:36.433 +05:30 [INF] Entity Framework Core 6.0.10 initialized 'APIDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+2023-12-03 20:55:36.441 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[AuthorId], [b].[Price], [b].[PublisherId], [b].[Title], [p].[PublisherId], [p].[Name], [a].[AuthorId], [a].[FirstName], [a].[LastName]
+FROM [Books] AS [b]
+LEFT JOIN [Publishers] AS [p] ON [b].[PublisherId] = [p].[PublisherId]
+LEFT JOIN [Authors] AS [a] ON [b].[AuthorId] = [a].[AuthorId]
+2023-12-03 20:55:36.452 +05:30 [INF] End in GetAllBooks
+2023-12-03 20:55:36.452 +05:30 [INF] End of GetAllBooks
+2023-12-03 20:55:36.452 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TechincalAssessment.Models.Book, TechincalAssessment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-12-03 20:55:36.452 +05:30 [INF] Executed action TechincalAssessment.Controllers.BookController.GetAllBooks (TechincalAssessment) in 1580.323ms
+2023-12-03 20:55:36.452 +05:30 [INF] Executed endpoint 'TechincalAssessment.Controllers.BookController.GetAllBooks (TechincalAssessment)'
+2023-12-03 20:55:36.452 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7252/api/Book/GetAllBooks - - - 200 - application/json;+charset=utf-8 1615.0422ms
+2023-12-03 21:00:00.864 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7252/api/Book/BookBulkInsert application/json 833
+2023-12-03 21:00:00.868 +05:30 [INF] Executing endpoint 'TechincalAssessment.Controllers.BookController.BookBulkInsert (TechincalAssessment)'
+2023-12-03 21:00:00.881 +05:30 [INF] Route matched with {action = "BookBulkInsert", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] BookBulkInsert(System.Collections.Generic.List`1[TechincalAssessment.Models.BookDto]) on controller TechincalAssessment.Controllers.BookController (TechincalAssessment).
+2023-12-03 21:00:00.884 +05:30 [INF] Entry in BookBulkInsert
+2023-12-03 21:00:03.187 +05:30 [INF] Entry in CreateRangeAsync
+2023-12-03 21:00:03.188 +05:30 [INF] Entity Framework Core 6.0.10 initialized 'APIDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+2023-12-03 21:00:03.201 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[@__bookDto_Publisher_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[PublisherId], [p].[Name]
+FROM [Publishers] AS [p]
+WHERE [p].[Name] = @__bookDto_Publisher_Name_0
+2023-12-03 21:00:03.206 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Publishers] ([Name])
+VALUES (@p0);
+SELECT [PublisherId]
+FROM [Publishers]
+WHERE @@ROWCOUNT = 1 AND [PublisherId] = scope_identity();
+2023-12-03 21:00:03.215 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@__bookDto_Author_LastName_0='?' (Size = 4000), @__bookDto_Author_FirstName_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[AuthorId], [a].[FirstName], [a].[LastName]
+FROM [Authors] AS [a]
+WHERE ([a].[LastName] = @__bookDto_Author_LastName_0) AND ([a].[FirstName] = @__bookDto_Author_FirstName_1)
+2023-12-03 21:00:03.218 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Authors] ([FirstName], [LastName])
+VALUES (@p0, @p1);
+SELECT [AuthorId]
+FROM [Authors]
+WHERE @@ROWCOUNT = 1 AND [AuthorId] = scope_identity();
+2023-12-03 21:00:03.220 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__bookDto_Publisher_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[PublisherId], [p].[Name]
+FROM [Publishers] AS [p]
+WHERE [p].[Name] = @__bookDto_Publisher_Name_0
+2023-12-03 21:00:03.221 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__bookDto_Author_LastName_0='?' (Size = 4000), @__bookDto_Author_FirstName_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[AuthorId], [a].[FirstName], [a].[LastName]
+FROM [Authors] AS [a]
+WHERE ([a].[LastName] = @__bookDto_Author_LastName_0) AND ([a].[FirstName] = @__bookDto_Author_FirstName_1)
+2023-12-03 21:00:03.224 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Authors] ([FirstName], [LastName])
+VALUES (@p0, @p1);
+SELECT [AuthorId]
+FROM [Authors]
+WHERE @@ROWCOUNT = 1 AND [AuthorId] = scope_identity();
+2023-12-03 21:00:03.228 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__bookDto_Publisher_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[PublisherId], [p].[Name]
+FROM [Publishers] AS [p]
+WHERE [p].[Name] = @__bookDto_Publisher_Name_0
+2023-12-03 21:00:03.230 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Publishers] ([Name])
+VALUES (@p0);
+SELECT [PublisherId]
+FROM [Publishers]
+WHERE @@ROWCOUNT = 1 AND [PublisherId] = scope_identity();
+2023-12-03 21:00:03.231 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__bookDto_Author_LastName_0='?' (Size = 4000), @__bookDto_Author_FirstName_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[AuthorId], [a].[FirstName], [a].[LastName]
+FROM [Authors] AS [a]
+WHERE ([a].[LastName] = @__bookDto_Author_LastName_0) AND ([a].[FirstName] = @__bookDto_Author_FirstName_1)
+2023-12-03 21:00:03.232 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Authors] ([FirstName], [LastName])
+VALUES (@p0, @p1);
+SELECT [AuthorId]
+FROM [Authors]
+WHERE @@ROWCOUNT = 1 AND [AuthorId] = scope_identity();
+2023-12-03 21:00:03.233 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__bookDto_Publisher_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[PublisherId], [p].[Name]
+FROM [Publishers] AS [p]
+WHERE [p].[Name] = @__bookDto_Publisher_Name_0
+2023-12-03 21:00:03.235 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__bookDto_Author_LastName_0='?' (Size = 4000), @__bookDto_Author_FirstName_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[AuthorId], [a].[FirstName], [a].[LastName]
+FROM [Authors] AS [a]
+WHERE ([a].[LastName] = @__bookDto_Author_LastName_0) AND ([a].[FirstName] = @__bookDto_Author_FirstName_1)
+2023-12-03 21:00:03.264 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p4='?' (DbType = Int32), @p5='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p6='?' (DbType = Int32), @p7='?' (Size = 4000), @p8='?' (DbType = Int32), @p9='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p10='?' (DbType = Int32), @p11='?' (Size = 4000), @p12='?' (DbType = Int32), @p13='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p14='?' (DbType = Int32), @p15='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DECLARE @inserted0 TABLE ([Id] int, [_Position] [int]);
+MERGE [Books] USING (
+VALUES (@p0, @p1, @p2, @p3, 0),
+(@p4, @p5, @p6, @p7, 1),
+(@p8, @p9, @p10, @p11, 2),
+(@p12, @p13, @p14, @p15, 3)) AS i ([AuthorId], [Price], [PublisherId], [Title], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([AuthorId], [Price], [PublisherId], [Title])
+VALUES (i.[AuthorId], i.[Price], i.[PublisherId], i.[Title])
+OUTPUT INSERTED.[Id], i._Position
+INTO @inserted0;
+
+SELECT [i].[Id] FROM @inserted0 i
+ORDER BY [i].[_Position];
+2023-12-03 21:00:03.265 +05:30 [INF] End in CreateRangeAsync
+2023-12-03 21:00:03.265 +05:30 [INF] End of BookBulkInsert
+2023-12-03 21:00:03.273 +05:30 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2023-12-03 21:00:03.273 +05:30 [INF] Executed action TechincalAssessment.Controllers.BookController.BookBulkInsert (TechincalAssessment) in 2392.1747ms
+2023-12-03 21:00:03.273 +05:30 [INF] Executed endpoint 'TechincalAssessment.Controllers.BookController.BookBulkInsert (TechincalAssessment)'
+2023-12-03 21:00:03.273 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7252/api/Book/BookBulkInsert application/json 833 - 200 0 - 2409.1298ms
+2023-12-03 21:01:49.609 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7252/api/Book/5/GetCitation?Type=MLA - -
+2023-12-03 21:01:49.610 +05:30 [INF] Executing endpoint 'TechincalAssessment.Controllers.BookController.GetCitation (TechincalAssessment)'
+2023-12-03 21:01:49.611 +05:30 [INF] Route matched with {action = "GetCitation", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetCitation(Int32, System.String) on controller TechincalAssessment.Controllers.BookController (TechincalAssessment).
+2023-12-03 21:01:51.538 +05:30 [INF] Entry in GetMlaCitation :  Param id:5 Type : MLA
+2023-12-03 21:01:51.539 +05:30 [INF] Entry in GetMlaCitation method
+2023-12-03 21:01:51.540 +05:30 [INF] Entity Framework Core 6.0.10 initialized 'APIDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+2023-12-03 21:01:51.555 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[AuthorId], [b].[Price], [b].[PublisherId], [b].[Title], [a].[AuthorId], [a].[FirstName], [a].[LastName], [p].[PublisherId], [p].[Name]
+FROM [Books] AS [b]
+LEFT JOIN [Authors] AS [a] ON [b].[AuthorId] = [a].[AuthorId]
+LEFT JOIN [Publishers] AS [p] ON [b].[PublisherId] = [p].[PublisherId]
+WHERE [b].[Id] = @__id_0
+2023-12-03 21:01:51.556 +05:30 [INF] End in GetMlaCitation
+2023-12-03 21:01:51.556 +05:30 [INF] End of GetMlaCitation
+2023-12-03 21:01:51.556 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-12-03 21:01:51.556 +05:30 [INF] Executed action TechincalAssessment.Controllers.BookController.GetCitation (TechincalAssessment) in 1944.6898ms
+2023-12-03 21:01:51.556 +05:30 [INF] Executed endpoint 'TechincalAssessment.Controllers.BookController.GetCitation (TechincalAssessment)'
+2023-12-03 21:01:51.556 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7252/api/Book/5/GetCitation?Type=MLA - - - 200 - text/plain;+charset=utf-8 1948.2909ms
+2023-12-03 21:03:11.679 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7252/api/Book/5/GetCitation?Type=Chicago - -
+2023-12-03 21:03:11.680 +05:30 [INF] Executing endpoint 'TechincalAssessment.Controllers.BookController.GetCitation (TechincalAssessment)'
+2023-12-03 21:03:11.684 +05:30 [INF] Route matched with {action = "GetCitation", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetCitation(Int32, System.String) on controller TechincalAssessment.Controllers.BookController (TechincalAssessment).
+2023-12-03 21:03:13.521 +05:30 [INF] Entry in GetMlaCitation :  Param id:5 Type : Chicago
+2023-12-03 21:03:13.521 +05:30 [INF] Entry in GetMlaCitation method
+2023-12-03 21:03:13.524 +05:30 [INF] Entity Framework Core 6.0.10 initialized 'APIDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+2023-12-03 21:03:13.527 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[AuthorId], [b].[Price], [b].[PublisherId], [b].[Title], [a].[AuthorId], [a].[FirstName], [a].[LastName], [p].[PublisherId], [p].[Name]
+FROM [Books] AS [b]
+LEFT JOIN [Authors] AS [a] ON [b].[AuthorId] = [a].[AuthorId]
+LEFT JOIN [Publishers] AS [p] ON [b].[PublisherId] = [p].[PublisherId]
+WHERE [b].[Id] = @__id_0
+2023-12-03 21:03:13.528 +05:30 [INF] End in GetMlaCitation
+2023-12-03 21:03:13.528 +05:30 [INF] End of GetMlaCitation
+2023-12-03 21:03:13.528 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-12-03 21:03:13.528 +05:30 [INF] Executed action TechincalAssessment.Controllers.BookController.GetCitation (TechincalAssessment) in 1843.154ms
+2023-12-03 21:03:13.529 +05:30 [INF] Executed endpoint 'TechincalAssessment.Controllers.BookController.GetCitation (TechincalAssessment)'
+2023-12-03 21:03:13.529 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7252/api/Book/5/GetCitation?Type=Chicago - - - 200 - text/plain;+charset=utf-8 1849.5492ms
+2023-12-03 21:03:52.588 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7252/api/Book/SortByPublisher - -
+2023-12-03 21:03:52.599 +05:30 [INF] Executing endpoint 'TechincalAssessment.Controllers.BookController.SortByPublisher (TechincalAssessment)'
+2023-12-03 21:03:52.603 +05:30 [INF] Route matched with {action = "SortByPublisher", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult SortByPublisher() on controller TechincalAssessment.Controllers.BookController (TechincalAssessment).
+2023-12-03 21:03:52.604 +05:30 [INF] Entry in SortByPublisher
+2023-12-03 21:03:52.605 +05:30 [INF] Entry in SortdByPublisher method
+2023-12-03 21:03:52.605 +05:30 [INF] Entity Framework Core 6.0.10 initialized 'APIDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+2023-12-03 21:03:52.633 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[AuthorId], [b].[Price], [b].[PublisherId], [b].[Title], [p].[PublisherId], [p].[Name], [a].[AuthorId], [a].[FirstName], [a].[LastName]
+FROM [Books] AS [b]
+LEFT JOIN [Publishers] AS [p] ON [b].[PublisherId] = [p].[PublisherId]
+LEFT JOIN [Authors] AS [a] ON [b].[AuthorId] = [a].[AuthorId]
+ORDER BY [p].[Name], [a].[LastName], [a].[FirstName], [b].[Title]
+2023-12-03 21:03:52.633 +05:30 [INF] End in SortdByPublisher
+2023-12-03 21:03:52.633 +05:30 [INF] End of SortByPublisher
+2023-12-03 21:03:52.633 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TechincalAssessment.Models.Book, TechincalAssessment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-12-03 21:03:52.634 +05:30 [INF] Executed action TechincalAssessment.Controllers.BookController.SortByPublisher (TechincalAssessment) in 30.2792ms
+2023-12-03 21:03:52.634 +05:30 [INF] Executed endpoint 'TechincalAssessment.Controllers.BookController.SortByPublisher (TechincalAssessment)'
+2023-12-03 21:03:52.634 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7252/api/Book/SortByPublisher - - - 200 - application/json;+charset=utf-8 45.9886ms
+2023-12-03 21:04:43.503 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7252/api/Book/SortByAuthor - -
+2023-12-03 21:04:43.507 +05:30 [INF] Executing endpoint 'TechincalAssessment.Controllers.BookController.SortByAuthor (TechincalAssessment)'
+2023-12-03 21:04:43.523 +05:30 [INF] Route matched with {action = "SortByAuthor", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult SortByAuthor() on controller TechincalAssessment.Controllers.BookController (TechincalAssessment).
+2023-12-03 21:04:43.524 +05:30 [INF] Entry in SortByAuthor
+2023-12-03 21:04:43.525 +05:30 [INF] Entry in SortdByAuthor method
+2023-12-03 21:04:43.526 +05:30 [INF] Entity Framework Core 6.0.10 initialized 'APIDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+2023-12-03 21:04:43.538 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[AuthorId], [b].[Price], [b].[PublisherId], [b].[Title], [p].[PublisherId], [p].[Name], [a].[AuthorId], [a].[FirstName], [a].[LastName]
+FROM [Books] AS [b]
+LEFT JOIN [Authors] AS [a] ON [b].[AuthorId] = [a].[AuthorId]
+LEFT JOIN [Publishers] AS [p] ON [b].[PublisherId] = [p].[PublisherId]
+ORDER BY [a].[LastName], [a].[FirstName], [b].[Title]
+2023-12-03 21:04:43.538 +05:30 [INF] End in SortdByAuthor
+2023-12-03 21:04:43.538 +05:30 [INF] End of SortByAuthor
+2023-12-03 21:04:43.538 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TechincalAssessment.Models.Book, TechincalAssessment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-12-03 21:04:43.538 +05:30 [INF] Executed action TechincalAssessment.Controllers.BookController.SortByAuthor (TechincalAssessment) in 15.0125ms
+2023-12-03 21:04:43.538 +05:30 [INF] Executed endpoint 'TechincalAssessment.Controllers.BookController.SortByAuthor (TechincalAssessment)'
+2023-12-03 21:04:43.539 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7252/api/Book/SortByAuthor - - - 200 - application/json;+charset=utf-8 35.5699ms
+2023-12-03 21:05:20.310 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7252/api/Book/SortByPublisherUsingSP - -
+2023-12-03 21:05:20.310 +05:30 [INF] Executing endpoint 'TechincalAssessment.Controllers.BookController.SortByPublisherUsingSP (TechincalAssessment)'
+2023-12-03 21:05:20.320 +05:30 [INF] Route matched with {action = "SortByPublisherUsingSP", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult SortByPublisherUsingSP() on controller TechincalAssessment.Controllers.BookController (TechincalAssessment).
+2023-12-03 21:05:22.066 +05:30 [INF] Entry in SortByPublisherUsingSP with stored procedure 
+2023-12-03 21:05:22.067 +05:30 [INF] Entry in SortdByPublisherUsingSP method
+2023-12-03 21:05:22.068 +05:30 [INF] Entity Framework Core 6.0.10 initialized 'APIDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+2023-12-03 21:05:22.105 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC GetBooksSortedByPublisherAuthorTitle
+2023-12-03 21:05:22.120 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[PublisherId], [p].[Name]
+FROM [Publishers] AS [p]
+WHERE [p].[PublisherId] = @__p_0
+2023-12-03 21:05:22.125 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[AuthorId], [a].[FirstName], [a].[LastName]
+FROM [Authors] AS [a]
+WHERE [a].[AuthorId] = @__p_0
+2023-12-03 21:05:22.127 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[AuthorId], [a].[FirstName], [a].[LastName]
+FROM [Authors] AS [a]
+WHERE [a].[AuthorId] = @__p_0
+2023-12-03 21:05:22.128 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[PublisherId], [p].[Name]
+FROM [Publishers] AS [p]
+WHERE [p].[PublisherId] = @__p_0
+2023-12-03 21:05:22.129 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[AuthorId], [a].[FirstName], [a].[LastName]
+FROM [Authors] AS [a]
+WHERE [a].[AuthorId] = @__p_0
+2023-12-03 21:05:22.130 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[PublisherId], [p].[Name]
+FROM [Publishers] AS [p]
+WHERE [p].[PublisherId] = @__p_0
+2023-12-03 21:05:22.131 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[AuthorId], [a].[FirstName], [a].[LastName]
+FROM [Authors] AS [a]
+WHERE [a].[AuthorId] = @__p_0
+2023-12-03 21:05:22.132 +05:30 [INF] End in SortdByPublisherUsingSP
+2023-12-03 21:05:22.132 +05:30 [INF] End of SortByPublisherUsingSP with stored procedure 
+2023-12-03 21:05:22.132 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TechincalAssessment.Models.Book, TechincalAssessment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-12-03 21:05:22.132 +05:30 [INF] Executed action TechincalAssessment.Controllers.BookController.SortByPublisherUsingSP (TechincalAssessment) in 1812.3404ms
+2023-12-03 21:05:22.132 +05:30 [INF] Executed endpoint 'TechincalAssessment.Controllers.BookController.SortByPublisherUsingSP (TechincalAssessment)'
+2023-12-03 21:05:22.132 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7252/api/Book/SortByPublisherUsingSP - - - 200 - application/json;+charset=utf-8 1822.7137ms
+2023-12-03 21:05:43.661 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7252/api/Book/SortByAuthorUsingSP - -
+2023-12-03 21:05:43.662 +05:30 [INF] Executing endpoint 'TechincalAssessment.Controllers.BookController.SortByAuthorUsingSP (TechincalAssessment)'
+2023-12-03 21:05:43.669 +05:30 [INF] Route matched with {action = "SortByAuthorUsingSP", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult SortByAuthorUsingSP() on controller TechincalAssessment.Controllers.BookController (TechincalAssessment).
+2023-12-03 21:05:43.670 +05:30 [INF] Entry in SortByAuthorUsingSP with stored procedure 
+2023-12-03 21:05:43.671 +05:30 [INF] Entry in SortdByAuthorUsingSP method
+2023-12-03 21:05:43.672 +05:30 [INF] Entity Framework Core 6.0.10 initialized 'APIDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+2023-12-03 21:05:43.685 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC GetBooksSortedByAuthorTitle
+2023-12-03 21:05:43.687 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[PublisherId], [p].[Name]
+FROM [Publishers] AS [p]
+WHERE [p].[PublisherId] = @__p_0
+2023-12-03 21:05:43.688 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[AuthorId], [a].[FirstName], [a].[LastName]
+FROM [Authors] AS [a]
+WHERE [a].[AuthorId] = @__p_0
+2023-12-03 21:05:43.689 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[PublisherId], [p].[Name]
+FROM [Publishers] AS [p]
+WHERE [p].[PublisherId] = @__p_0
+2023-12-03 21:05:43.692 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[AuthorId], [a].[FirstName], [a].[LastName]
+FROM [Authors] AS [a]
+WHERE [a].[AuthorId] = @__p_0
+2023-12-03 21:05:43.694 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[AuthorId], [a].[FirstName], [a].[LastName]
+FROM [Authors] AS [a]
+WHERE [a].[AuthorId] = @__p_0
+2023-12-03 21:05:43.695 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[PublisherId], [p].[Name]
+FROM [Publishers] AS [p]
+WHERE [p].[PublisherId] = @__p_0
+2023-12-03 21:05:43.697 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[AuthorId], [a].[FirstName], [a].[LastName]
+FROM [Authors] AS [a]
+WHERE [a].[AuthorId] = @__p_0
+2023-12-03 21:05:43.697 +05:30 [INF] End in SortdByAuthorUsingSP
+2023-12-03 21:05:43.697 +05:30 [INF] End of SortByAuthorUsingSP with stored procedure 
+2023-12-03 21:05:43.697 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TechincalAssessment.Models.Book, TechincalAssessment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-12-03 21:05:43.697 +05:30 [INF] Executed action TechincalAssessment.Controllers.BookController.SortByAuthorUsingSP (TechincalAssessment) in 28.0168ms
+2023-12-03 21:05:43.698 +05:30 [INF] Executed endpoint 'TechincalAssessment.Controllers.BookController.SortByAuthorUsingSP (TechincalAssessment)'
+2023-12-03 21:05:43.698 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7252/api/Book/SortByAuthorUsingSP - - - 200 - application/json;+charset=utf-8 36.5351ms
+2023-12-03 21:06:29.180 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7252/api/Book/GetTotalPrice - -
+2023-12-03 21:06:29.181 +05:30 [INF] Executing endpoint 'TechincalAssessment.Controllers.BookController.GetTotalPrice (TechincalAssessment)'
+2023-12-03 21:06:29.191 +05:30 [INF] Route matched with {action = "GetTotalPrice", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetTotalPrice() on controller TechincalAssessment.Controllers.BookController (TechincalAssessment).
+2023-12-03 21:06:30.699 +05:30 [INF] Entry in GetTotalPrice
+2023-12-03 21:06:30.701 +05:30 [INF] Entry in GetTotalPrice method
+2023-12-03 21:06:30.706 +05:30 [INF] Entity Framework Core 6.0.10 initialized 'APIDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+2023-12-03 21:06:30.739 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COALESCE(SUM([b].[Price]), 0.0)
+FROM [Books] AS [b]
+2023-12-03 21:06:30.739 +05:30 [INF] End in GetTotalPrice
+2023-12-03 21:06:30.739 +05:30 [INF] End of GetTotalPrice
+2023-12-03 21:06:30.739 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.Decimal, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-12-03 21:06:30.742 +05:30 [INF] Executed action TechincalAssessment.Controllers.BookController.GetTotalPrice (TechincalAssessment) in 1550.7273ms
+2023-12-03 21:06:30.742 +05:30 [INF] Executed endpoint 'TechincalAssessment.Controllers.BookController.GetTotalPrice (TechincalAssessment)'
+2023-12-03 21:06:30.742 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7252/api/Book/GetTotalPrice - - - 200 - application/json;+charset=utf-8 1562.0539ms
+2023-12-03 21:18:09.959 +05:30 [INF] Now listening on: https://[::]:7252
+2023-12-03 21:18:10.022 +05:30 [INF] Now listening on: http://[::]:5252
+2023-12-03 21:18:10.032 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-12-03 21:18:10.034 +05:30 [INF] Hosting environment: Development
+2023-12-03 21:18:10.034 +05:30 [INF] Content root path: C:\Users\vpalanisamy\Desktop\Vivitha Palanisamy\TechincalAssessment\TechincalAssessment
+2023-12-03 21:19:17.120 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7252/api/Book/CreateBook application/json 180
+2023-12-03 21:19:17.249 +05:30 [INF] Executing endpoint 'TechincalAssessment.Controllers.BookController.CreateBook (TechincalAssessment)'
+2023-12-03 21:19:17.315 +05:30 [INF] Route matched with {action = "CreateBook", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateBook(TechincalAssessment.Models.BookDto) on controller TechincalAssessment.Controllers.BookController (TechincalAssessment).
+2023-12-03 21:19:17.761 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-12-03 21:19:17.801 +05:30 [INF] Executed action TechincalAssessment.Controllers.BookController.CreateBook (TechincalAssessment) in 476.121ms
+2023-12-03 21:19:17.808 +05:30 [INF] Executed endpoint 'TechincalAssessment.Controllers.BookController.CreateBook (TechincalAssessment)'
+2023-12-03 21:19:17.818 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7252/api/Book/CreateBook application/json 180 - 400 - application/problem+json;+charset=utf-8 705.0677ms
+2023-12-03 21:19:26.711 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7252/api/Book/CreateBook application/json 179
+2023-12-03 21:19:26.716 +05:30 [INF] Executing endpoint 'TechincalAssessment.Controllers.BookController.CreateBook (TechincalAssessment)'
+2023-12-03 21:19:26.717 +05:30 [INF] Route matched with {action = "CreateBook", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateBook(TechincalAssessment.Models.BookDto) on controller TechincalAssessment.Controllers.BookController (TechincalAssessment).
+2023-12-03 21:19:26.741 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-12-03 21:19:26.742 +05:30 [INF] Executed action TechincalAssessment.Controllers.BookController.CreateBook (TechincalAssessment) in 24.9806ms
+2023-12-03 21:19:26.742 +05:30 [INF] Executed endpoint 'TechincalAssessment.Controllers.BookController.CreateBook (TechincalAssessment)'
+2023-12-03 21:19:26.742 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7252/api/Book/CreateBook application/json 179 - 400 - application/problem+json;+charset=utf-8 31.0243ms
+2023-12-03 21:19:33.383 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7252/api/Book/CreateBook application/json 182
+2023-12-03 21:19:33.384 +05:30 [INF] Executing endpoint 'TechincalAssessment.Controllers.BookController.CreateBook (TechincalAssessment)'
+2023-12-03 21:19:33.384 +05:30 [INF] Route matched with {action = "CreateBook", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateBook(TechincalAssessment.Models.BookDto) on controller TechincalAssessment.Controllers.BookController (TechincalAssessment).
+2023-12-03 21:19:33.389 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-12-03 21:19:33.389 +05:30 [INF] Executed action TechincalAssessment.Controllers.BookController.CreateBook (TechincalAssessment) in 5.0921ms
+2023-12-03 21:19:33.389 +05:30 [INF] Executed endpoint 'TechincalAssessment.Controllers.BookController.CreateBook (TechincalAssessment)'
+2023-12-03 21:19:33.390 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7252/api/Book/CreateBook application/json 182 - 400 - application/problem+json;+charset=utf-8 6.2375ms
+2023-12-03 22:07:47.439 +05:30 [INF] Now listening on: https://[::]:7252
+2023-12-03 22:07:47.501 +05:30 [INF] Now listening on: http://[::]:5252
+2023-12-03 22:07:47.510 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-12-03 22:07:47.511 +05:30 [INF] Hosting environment: Development
+2023-12-03 22:07:47.512 +05:30 [INF] Content root path: C:\Users\vpalanisamy\Downloads\TechnicalAssessment_Knila-master\TechincalAssessment
+2023-12-03 22:08:16.685 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7252/swagger/index.html - -
+2023-12-03 22:08:17.177 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7252/swagger/index.html - - - 200 - text/html;charset=utf-8 495.4794ms
+2023-12-03 22:08:17.180 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7252/swagger/swagger-ui-bundle.js - -
+2023-12-03 22:08:17.180 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7252/swagger/swagger-ui-standalone-preset.js - -
+2023-12-03 22:08:17.180 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7252/_framework/aspnetcore-browser-refresh.js - -
+2023-12-03 22:08:17.180 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7252/swagger/swagger-ui.css - -
+2023-12-03 22:08:17.194 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7252/_vs/browserLink - -
+2023-12-03 22:08:17.197 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7252/_framework/aspnetcore-browser-refresh.js - - - 200 12008 application/javascript;+charset=utf-8 16.7350ms
+2023-12-03 22:08:17.281 +05:30 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2023-12-03 22:08:17.281 +05:30 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2023-12-03 22:08:17.281 +05:30 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2023-12-03 22:08:17.281 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7252/swagger/swagger-ui-standalone-preset.js - - - 200 312163 application/javascript 100.9692ms
+2023-12-03 22:08:17.281 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7252/swagger/swagger-ui-bundle.js - - - 200 1061536 application/javascript 101.0148ms
+2023-12-03 22:08:17.281 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7252/swagger/swagger-ui.css - - - 200 144929 text/css 101.0946ms
+2023-12-03 22:08:17.300 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7252/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 106.3013ms
+2023-12-03 22:08:17.530 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7252/swagger/v1/swagger.json - -
+2023-12-03 22:08:17.727 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7252/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 196.7466ms
+2023-12-03 22:08:21.408 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7252/api/Book/GetAllBooks - -
+2023-12-03 22:08:21.442 +05:30 [INF] Executing endpoint 'TechincalAssessment.Controllers.BookController.GetAllBooks (TechincalAssessment)'
+2023-12-03 22:08:21.480 +05:30 [INF] Route matched with {action = "GetAllBooks", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllBooks(System.String, System.String, System.String) on controller TechincalAssessment.Controllers.BookController (TechincalAssessment).
+2023-12-03 22:08:21.743 +05:30 [INF] Entry in GetAllBooks
+2023-12-03 22:08:21.759 +05:30 [INF] Entry in GetAllBooks
+2023-12-03 22:08:22.545 +05:30 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Book'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2023-12-03 22:08:22.751 +05:30 [INF] Entity Framework Core 6.0.10 initialized 'APIDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+2023-12-03 22:08:23.974 +05:30 [INF] Executed DbCommand (48ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[AuthorId], [b].[Price], [b].[PublisherId], [b].[Title], [p].[PublisherId], [p].[Name], [a].[AuthorId], [a].[FirstName], [a].[LastName]
+FROM [Books] AS [b]
+LEFT JOIN [Publishers] AS [p] ON [b].[PublisherId] = [p].[PublisherId]
+LEFT JOIN [Authors] AS [a] ON [b].[AuthorId] = [a].[AuthorId]
+2023-12-03 22:08:24.134 +05:30 [INF] End in GetAllBooks
+2023-12-03 22:08:24.134 +05:30 [INF] End of GetAllBooks
+2023-12-03 22:08:24.141 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TechincalAssessment.Models.Book, TechincalAssessment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-12-03 22:08:24.162 +05:30 [INF] Executed action TechincalAssessment.Controllers.BookController.GetAllBooks (TechincalAssessment) in 2673.263ms
+2023-12-03 22:08:24.164 +05:30 [INF] Executed endpoint 'TechincalAssessment.Controllers.BookController.GetAllBooks (TechincalAssessment)'
+2023-12-03 22:08:24.173 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7252/api/Book/GetAllBooks - - - 200 - application/json;+charset=utf-8 2765.5727ms
