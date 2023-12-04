@@ -1,0 +1,46 @@
+﻿[
+  {
+    "title": "A Suitable Boy",
+    "price": 2186.35,
+    "publisher": {
+      "name": "Penguin Random House India"
+    },
+    "author": {
+      "lastName": "Seth",
+      "firstName": "Vikram"
+    }
+  },
+{
+    "title": "The White Tiger",
+    "price": 1360,
+    "publisher": {
+      "name": "HarperCollins India"
+    },
+    "author": {
+      "lastName": "Adiga",
+      "firstName": "Aravind"
+    }
+  },
+{
+    "title": "Interpreter of Maladies",
+    "price": 1221.25,
+    "publisher": {
+      "name": "Houghton Mifflin Harcourt India"
+    },
+    "author": {
+      "lastName": "Lahiri",
+      "firstName": "Jhumpa"
+    }
+  },
+{
+    "title": "An Equal Music",
+    "price": 1899.99,
+    "publisher": {
+      "name": "Penguin Random House India"
+    },
+    "author": {
+      "lastName": "Seth",
+      "firstName": "Vikram"
+    }
+  }
+]
